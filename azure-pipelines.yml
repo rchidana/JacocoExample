@@ -6,9 +6,6 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
-
 steps:
 - task: Maven@3
   inputs:
@@ -18,3 +15,11 @@ steps:
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     goals: 'package'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/target/surefire-reports/*.xml'
+- task: PublishCodeCoverageResults@2
+  inputs:
+    summaryFileLocation: 'target/site/jacoco/jacoco.xml'
