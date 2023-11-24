@@ -17,13 +17,11 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/target/surefire-reports/*.xml'
 - task: PublishCodeCoverageResults@2
   inputs:
     summaryFileLocation: 'target/site/jacoco/jacoco.xml'
