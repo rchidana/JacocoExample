@@ -26,4 +26,4 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
 - task: PublishCodeCoverageResults@2
   inputs:
-    summaryFileLocation: 'site/jacoco/jacoco.xml'
+    summaryFileLocation: 'target/site/jacoco/jacoco.xml'
