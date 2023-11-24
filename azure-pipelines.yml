@@ -24,3 +24,8 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
+
+- task: reportgenerator@5
+  inputs:
+    reports: 'coverage.xml'
+    targetdir: 'coveragereport'
