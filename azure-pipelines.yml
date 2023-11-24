@@ -24,8 +24,6 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
-
-- task: reportgenerator@5
+- task: PublishCodeCoverageResults@2
   inputs:
-    reports: 'jacoco.xml'
-    targetdir: 'site/jacoco'
+    summaryFileLocation: 'site/jacoco/jacoco.xml'
