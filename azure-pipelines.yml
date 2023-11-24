@@ -27,5 +27,5 @@ steps:
 
 - task: reportgenerator@5
   inputs:
-    reports: 'coverage.xml'
-    targetdir: 'coveragereport'
+    reports: 'jacoco.xml'
+    targetdir: 'site/jacoco'
