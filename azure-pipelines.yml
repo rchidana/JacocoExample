@@ -23,4 +23,4 @@ steps:
 - task: PublishCodeCoverageResults@2
   inputs:
     summaryFileLocation: 'target/site/jacoco/jacoco.xml'
-    pathToSources: 'src'
+    pathToSources: 'src/main/java/com/training/example/JacocoExample'
